@@ -4,7 +4,7 @@
 
 This repository contains a web-based proof of concept for the Virtual Glass Window project. The POC demonstrates the core concept of a virtual window with parallax effect that responds to head tracking, creating the illusion of depth and looking through a real window into another environment.
 
-![Virtual Window POC Screenshot](https://placeholder-for-screenshot.png)
+![Virtual Window POC Screenshot](screenshot_01.png)
 
 ### Core Features Demonstrated
 
