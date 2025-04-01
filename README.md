@@ -6,6 +6,10 @@ This repository contains a web-based proof of concept for the Virtual Glass Wind
 
 ![Parallax Effect Animation](./parallax-animation.svg)
 
+Conceptual image
+
+![Virtual Window Logo](./Concept_01.png)
+
 ### Core Features Demonstrated
 
 - **Parallax Effect**: Multiple depth layers that move at different rates to create a convincing 3D effect
