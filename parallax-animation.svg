@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <!-- Background -->
+  <rect width="800" height="500" fill="#f0f4f8" stroke="#666" stroke-width="8"/>
+  
+  <!-- Room with user background -->
+  <rect x="50" y="100" width="300" height="300" rx="5" fill="#e1e8ed" stroke="none"/>
+  
+  <!-- Device (monitor/tablet) -->
+  <rect x="200" y="150" width="300" height="200" rx="5" fill="#333" stroke="#000" stroke-width="3"/>
+  
+  <!-- Virtual Window content -->
+  <g id="window-content">
+    <rect x="210" y="160" width="280" height="180" rx="3" fill="#87CEEB" stroke="#000" stroke-width="1"/>
+    
+    <!-- Virtual Window Layers -->
+    <!-- Far mountain -->
+    <polygon id="far-mountain" points="270,280 350,200 430,280" fill="#6a89cc" opacity="0.8">
+      <animateTransform
+        attributeName="transform"
+        type="translate"
+        values="-15;15;-15"
+        dur="4s"
+        repeatCount="indefinite"/>
+    </polygon>
+    
+    <!-- Mid mountain -->
+    <polygon id="mid-mountain" points="300,280 380,220 460,280" fill="#4a69bd" opacity="0.9">
+      <animateTransform
+        attributeName="transform"
+        type="translate"
+        values="-25;25;-25"
+        dur="4s"
+        repeatCount="indefinite"/>
+    </polygon>
+    
+    <!-- Foreground trees -->
+    <path id="trees" d="M290,280 L290,260 L280,260 L290,250 L280,250 L295,230 L310,250 L300,250 L310,260 L300,260 L300,280 Z" fill="#218c74">
+      <animateTransform
+        attributeName="transform"
+        type="translate"
+        values="-40;40;-40"
+        dur="4s"
+        repeatCount="indefinite"/>
+    </path>
+    
+    <path id="trees2" d="M400,280 L400,265 L390,265 L400,255 L390,255 L405,235 L420,255 L410,255 L420,265 L410,265 L410,280 Z" fill="#218c74">
+      <animateTransform
+        attributeName="transform"
+        type="translate"
+        values="-40;40;-40"
+        dur="4s"
+        repeatCount="indefinite"/>
+    </path>
+    
+    <!-- Window frame drawn ON TOP of the content -->
+    <rect x="210" y="160" width="280" height="180" rx="3" fill="none" stroke="#8B4513" stroke-width="6" opacity="0.9"/>
+    <line x1="350" y1="160" x2="350" y2="340" stroke="#8B4513" stroke-width="4" opacity="0.9"/>
+    <line x1="210" y1="250" x2="490" y2="250" stroke="#8B4513" stroke-width="4" opacity="0.9"/>
+  </g>
+  
+  <!-- User figure (stylized) - NOW DRAWN ON TOP OF EVERYTHING -->
+  <g id="user">
+    <!-- Body -->
+    <rect x="100" y="220" width="60" height="100" rx="10" fill="#747d8c"/>
+    <!-- Head -->
+    <circle cx="130" cy="200" r="25" fill="#f1f2f6"/>
+    <!-- Face details simplified -->
+    <circle cx="120" cy="195" r="3" fill="#333"/>
+    <circle cx="140" cy="195" r="3" fill="#333"/>
+    <path d="M125,210 Q130,215 135,210" stroke="#333" stroke-width="2" fill="none"/>
+    
+    <animateTransform
+      attributeName="transform"
+      type="translate"
+      values="-30;70;-30"
+      dur="4s"
+      repeatCount="indefinite"/>
+  </g>
+  
+  <!-- Labels and explanations -->
+  <text x="650" y="150" font-family="Arial" font-size="16" font-weight="bold">Face Tracking Parallax</text>
+  
+  <!-- Layer labels -->
+  <text x="650" y="190" font-family="Arial" font-size="14" fill="#6a89cc">Background Layer</text>
+  <text x="650" y="220" font-family="Arial" font-size="14" fill="#4a69bd">Middle Layer</text>
+  <text x="650" y="250" font-family="Arial" font-size="14" fill="#218c74">Foreground Layer</text>
+  
+  <!-- Motion arrows -->
+  <path d="M590,190 L620,190" stroke="#6a89cc" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M590,220 L630,220" stroke="#4a69bd" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M590,250 L640,250" stroke="#218c74" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+  
+  <!-- Title -->
+  <text x="400" y="50" text-anchor="middle" font-family="Arial" font-size="24" font-weight="bold">Virtual Glass Window: Parallax Effect Concept</text>
+  <!-- Subtitle -->
+  <text x="400" y="80" text-anchor="middle" font-family="Arial" font-size="16">User movement creates realistic depth effect</text>
+  
+  <!-- Explanation text -->
+  <text x="400" y="430" text-anchor="middle" font-family="Arial" font-size="14">
+    As the user moves from side to side, the scene layers shift at different rates
+  </text>
+  <text x="400" y="455" text-anchor="middle" font-family="Arial" font-size="14">
+    creating a realistic 3D parallax effect that mimics looking through a real window
+  </text>
+</svg>
